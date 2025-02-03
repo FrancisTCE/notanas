@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  client:
+    build:
+      context: ./client
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+
+  server:
+    build:
+      context: ./server
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+    volumes:
+      - "/home/francis/Drive:/drive"
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - client
+      - server
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
