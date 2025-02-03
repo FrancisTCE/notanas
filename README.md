@@ -5,7 +5,7 @@ As of now this is not yet secured please don't use this to store important thing
 
 To change default password please change the hardcoded values on Server -> service -> main.go -> line 66 and 67. (in future will be replace by the SSR Backend)
 
-To change default folder please change the hardcoded values on Server -> service -> main.go -> line 58. (in future will be replace by the SSR Backend) By default its hardcoded the sample folder.
+To change default folder please change the hardcoded values on Server -> service -> main.go -> line 58. (in future will be replace by the SSR Backend) 
 
 How to run:
 docker compose up --build
