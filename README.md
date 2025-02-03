@@ -1,2 +1,2 @@
 # notanas
-NextJS + GIN Golang File Server using Clouldflare tunnels [Work in Progress but functional]
+NextJS + GIN Golang + NGINX File Server using Clouldflare tunnels [Work in Progress but functional]
